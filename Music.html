@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodix-Music Player</title>
+    <link rel="stylesheet" href="Music.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="player-wrapper">
+        <div class="player-card">
+
+            <div class="album-art-box">
+                <img id="albumArt" src="https://placehold.co/280x280" alt="Album Art">
+            </div>
+
+            <div class="track-info">
+                <h2 id="songTitle">Song Title</h2>
+                <p id="songArtist">Artist name</p>
+            </div>
+
+            <div class="progress-section">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" value="0" min="0" max="100">
+                <span id="durationTime">0:00</span>
+            </div>
+
+            <div class="controls">
+                <button id="shuffleBtn" class="control-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button id="prevBtn" class="control-btn">⏮</button>
+                <button id="playBtn" class="control-btn play-btn"><i class="fa-solid fa-play"></i></button>
+                <button id="nextBtn" class="control-btn">⏭</button>
+                <button id="repeatBtn" class="control-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+
+            <div class="volume-section">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" id="volumeBar" min="0" max="100" value="70">
+            </div>
+
+            <button id="playlistToggle" class="playlist-toggle-btn">
+                <i class="fa-solid fa-list"></i> Playlist
+            </button>
+
+            <ul id="playlist" class="playlist"></ul>
+
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="Music.js"></script>
+
+</body>
+</html>
